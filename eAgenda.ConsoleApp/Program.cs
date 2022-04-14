@@ -40,7 +40,7 @@ namespace eAgenda.ConsoleApp
                             Console.ReadLine();
                     }
 
-                    else if (opcao == "3")
+                    else if (opcao == "3")  
                         tela.EditarRegistro();
 
                     else if (opcao == "4")
