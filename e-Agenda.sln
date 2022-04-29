@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.ConsoleApp", "eAgen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.Controladores", "eAgenda.Controladores\eAgenda.Controladores.csproj", "{4017E73E-8FEB-4DE8-8C3C-66178B41A902}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eAgenda.WindowsApp", "eAgenda.WindowsApp\eAgenda.WindowsApp.csproj", "{A95BB994-21A8-4117-A53D-AE0B198E41AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,14 @@ Global
 		{4017E73E-8FEB-4DE8-8C3C-66178B41A902}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4017E73E-8FEB-4DE8-8C3C-66178B41A902}.Release|x64.ActiveCfg = Release|Any CPU
 		{4017E73E-8FEB-4DE8-8C3C-66178B41A902}.Release|x64.Build.0 = Release|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +61,7 @@ Global
 		{D961C68A-EBEB-40AC-B35D-469267EE4514} = {3A72012A-312E-4137-A68B-097766890510}
 		{26CB4DC7-6B8C-46F4-8887-0F1DBAD308DB} = {3A72012A-312E-4137-A68B-097766890510}
 		{4017E73E-8FEB-4DE8-8C3C-66178B41A902} = {3A72012A-312E-4137-A68B-097766890510}
+		{A95BB994-21A8-4117-A53D-AE0B198E41AB} = {3A72012A-312E-4137-A68B-097766890510}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B9B1C5A-F0CC-4ECD-A32E-9E5C73E50DE1}

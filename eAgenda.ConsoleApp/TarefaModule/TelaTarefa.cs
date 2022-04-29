@@ -1,5 +1,6 @@
 ﻿using eAgenda.ConsoleApp.Shared;
 using eAgenda.Controladores.TarefaModule;
+using eAgenda.Dominio.Shared;
 using eAgenda.Dominio.TarefaModule;
 using System;
 using System.Collections.Generic;

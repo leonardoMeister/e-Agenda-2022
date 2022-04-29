@@ -4,6 +4,7 @@ using eAgenda.Controladores.CompromissoModule;
 using eAgenda.Controladores.ContatoModule;
 using eAgenda.Dominio.CompromissoModule;
 using eAgenda.Dominio.ContatoModule;
+using eAgenda.Dominio.Shared;
 using System;
 using System.Collections.Generic;
 

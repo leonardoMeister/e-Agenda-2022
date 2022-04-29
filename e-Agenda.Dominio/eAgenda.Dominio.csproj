@@ -49,6 +49,7 @@
     <Compile Include="ContatoModule\Contato.cs" />
     <Compile Include="ContatoModule\GrupoContato.cs" />
     <Compile Include="Shared\EntidadeBase.cs" />
+    <Compile Include="Shared\TipoAcao.cs" />
     <Compile Include="TarefaModule\Itens.cs" />
     <Compile Include="TarefaModule\Prioridade.cs" />
     <Compile Include="TarefaModule\PrioridadeEnum.cs" />

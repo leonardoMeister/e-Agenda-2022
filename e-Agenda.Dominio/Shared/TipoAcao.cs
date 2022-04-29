@@ -1,5 +1,5 @@
-﻿namespace eAgenda.ConsoleApp.Shared
-{
+﻿namespace eAgenda.Dominio.Shared
+{ 
     public enum TipoAcao
     {
         Inserindo, Editando,
