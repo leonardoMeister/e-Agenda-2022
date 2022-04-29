@@ -79,7 +79,7 @@ namespace eAgenda.ConsoleApp.ContatoModule
             Console.Write("Digite a empresa: ");
             string empresa = Console.ReadLine();
 
-            Contato cont =  new Contato(nome, email, telefone, empresa, cargo, tipoAcao.ToString());
+            Contato cont =  new Contato(nome, email, telefone, empresa, cargo, tipoAcao);
 
             return cont;
         }

@@ -14,14 +14,14 @@ namespace eAgenda.Dominio.ContatoModule
         public string Empresa { get; }
         private static int id = 1;
 
-        public Contato(string nome, string email, string telefone, string empresa, string cargo, string tipoAcao)
+        public Contato(string nome, string email, string telefone, string empresa, string cargo, TipoAcao tipoAcao)
         {
             Nome = nome;
             Email = email;
             Telefone = telefone;
             Empresa = empresa;
             Cargo = cargo;
-            if (tipoAcao == "Inserindo")
+            if (tipoAcao.ToString() == TipoAcao.Inserindo.ToString())
             {
                 GerarId();
             }

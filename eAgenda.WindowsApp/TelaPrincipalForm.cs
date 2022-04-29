@@ -1,6 +1,7 @@
 ﻿using eAgenda.Controladores.CompromissoModule;
 using eAgenda.Controladores.ContatoModule;
 using eAgenda.Controladores.TarefaModule;
+using eAgenda.WindowsApp.Modulos.MolContato.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes;
 using eAgenda.WindowsApp.Shared;
 using System;
@@ -56,16 +57,16 @@ namespace eAgenda.WindowsApp
 
         private void menuItemContato_Click(object sender, EventArgs e)
         {
-            /*
+            
             ConfiguracaoContatoToolBox configuracao = new ConfiguracaoContatoToolBox();
 
             ConfigurarToolBox(configuracao);
 
             AtualizarRodape(configuracao.TipoCadastro);
 
-            operacoes = new OperacoesContato(new ControladorContato());
+            operacoes = new AcoesContato(controladorContato);
 
-            ConfigurarPainelRegistros();*/
+            ConfigurarPainelRegistros();
         }
 
         private void menuItemCompromissos_Click(object sender, EventArgs e)

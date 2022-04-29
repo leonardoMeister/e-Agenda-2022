@@ -41,11 +41,11 @@ namespace eAgenda.ConsoleApp.Shared
         private void PopularAplicacao()
         {
             #region CONTATO
-            Contato contato1 = new Contato("leonardo", "leozinhomm1@gmail.com", "47992398644", "ndd", "func", TipoAcao.Inserindo.ToString());
-            Contato contato2 = new Contato("pedro", "pedrinhomm1@gmail.com", "47992398644", "ndd", "func", TipoAcao.Inserindo.ToString());
-            Contato contato3 = new Contato("jose", "josezinhomm1@gmail.com", "47992398644", "mec", "Chefe", TipoAcao.Inserindo.ToString());
-            Contato contato4 = new Contato("fernando", "fernandinhomm1@gmail.com", "47992398644", "dln", "Chefe", TipoAcao.Inserindo.ToString());
-            Contato contato5 = new Contato("marco", "marquinhomm1@gmail.com", "47992398644", "klabin", "estagio", TipoAcao.Inserindo.ToString());
+            Contato contato1 = new Contato("leonardo", "leozinhomm1@gmail.com", "47992398644", "ndd", "func", TipoAcao.Inserindo);
+            Contato contato2 = new Contato("pedro", "pedrinhomm1@gmail.com", "47992398644", "ndd", "func", TipoAcao.Inserindo);
+            Contato contato3 = new Contato("jose", "josezinhomm1@gmail.com", "47992398644", "mec", "Chefe", TipoAcao.Inserindo);
+            Contato contato4 = new Contato("fernando", "fernandinhomm1@gmail.com", "47992398644", "dln", "Chefe", TipoAcao.Inserindo);
+            Contato contato5 = new Contato("marco", "marquinhomm1@gmail.com", "47992398644", "klabin", "estagio", TipoAcao.Inserindo);
 
             controladorContato.InserirNovo(contato1);
             controladorContato.InserirNovo(contato2);
@@ -60,21 +60,21 @@ namespace eAgenda.ConsoleApp.Shared
             lista1.Add(new Itens("Coisa a fazer 2", 60));
             lista1.Add(new Itens("Coisa a fazer 3", 100));
             lista1.Add(new Itens("Coisa a fazer 4", 10));
-            Tarefa tarefa1 = new Tarefa("Dever Casa",new DateTime(2002,06,20), PrioridadeEnum.Alta,lista1,TipoAcao.Inserindo.ToString());
+            Tarefa tarefa1 = new Tarefa("Dever Casa",new DateTime(2002,06,20), PrioridadeEnum.Alta,lista1,TipoAcao.Inserindo);
 
             List<Itens> lista2 = new List<Itens>();
             lista2.Add(new Itens("Coisa a fazer 1", 20));
             lista2.Add(new Itens("Coisa a fazer 2", 13));
             lista2.Add(new Itens("Coisa a fazer 3", 65));
             lista2.Add(new Itens("Coisa a fazer 4", 83));
-            Tarefa tarefa2 = new Tarefa("Trabalho", new DateTime(2015, 11, 16), PrioridadeEnum.Baixa, lista2, TipoAcao.Inserindo.ToString());
-            Tarefa tarefa3 = new Tarefa("Pesquisa", DateTime.Now, PrioridadeEnum.Normal, lista1, TipoAcao.Inserindo.ToString());
-            Tarefa tarefa4 = new Tarefa("Ir na casa do pedro", DateTime.Now, PrioridadeEnum.Alta, lista2, TipoAcao.Inserindo.ToString());
+            Tarefa tarefa2 = new Tarefa("Trabalho", new DateTime(2015, 11, 16), PrioridadeEnum.Baixa, lista2, TipoAcao.Inserindo);
+            Tarefa tarefa3 = new Tarefa("Pesquisa", DateTime.Now, PrioridadeEnum.Normal, lista1, TipoAcao.Inserindo);
+            Tarefa tarefa4 = new Tarefa("Ir na casa do pedro", DateTime.Now, PrioridadeEnum.Alta, lista2, TipoAcao.Inserindo);
             
             List<Itens> lista3 = new List<Itens>();
             lista3.Add(new Itens("Coisa a fazer 1", 100));
             lista3.Add(new Itens("Coisa a fazer 2", 100));
-            Tarefa tarefa5 = new Tarefa("Fazer atividade", new DateTime(2015, 11, 16), PrioridadeEnum.Baixa, lista3, TipoAcao.Inserindo.ToString());
+            Tarefa tarefa5 = new Tarefa("Fazer atividade", new DateTime(2015, 11, 16), PrioridadeEnum.Baixa, lista3, TipoAcao.Inserindo);
 
             controladorTarefa.InserirNovo(tarefa1);
             controladorTarefa.InserirNovo(tarefa2);

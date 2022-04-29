@@ -1,6 +1,6 @@
-﻿namespace eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes
+﻿namespace eAgenda.WindowsApp.Modulos.MolContato.Configuracoes
 {
-    partial class TabelaListaTarefas
+    partial class TabelaListaContatos
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridTarefas = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTarefas)).BeginInit();
+            this.gridContato = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridContato)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridTarefas
+            // gridContato
             // 
-            this.gridTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTarefas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridTarefas.Location = new System.Drawing.Point(0, 0);
-            this.gridTarefas.Margin = new System.Windows.Forms.Padding(4);
-            this.gridTarefas.Name = "gridTarefas";
-            this.gridTarefas.RowHeadersWidth = 51;
-            this.gridTarefas.Size = new System.Drawing.Size(603, 475);
-            this.gridTarefas.TabIndex = 1;
+            this.gridContato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridContato.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridContato.Location = new System.Drawing.Point(0, 0);
+            this.gridContato.Margin = new System.Windows.Forms.Padding(4);
+            this.gridContato.Name = "gridContato";
+            this.gridContato.RowHeadersWidth = 51;
+            this.gridContato.Size = new System.Drawing.Size(603, 475);
+            this.gridContato.TabIndex = 2;
             // 
-            // TabelaListaTarefas
+            // TabelaListaContatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gridTarefas);
-            this.Name = "TabelaListaTarefas";
+            this.Controls.Add(this.gridContato);
+            this.Name = "TabelaListaContatos";
             this.Size = new System.Drawing.Size(603, 475);
-            ((System.ComponentModel.ISupportInitialize)(this.gridTarefas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridContato)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gridTarefas;
+        private System.Windows.Forms.DataGridView gridContato;
     }
 }

@@ -1,4 +1,5 @@
-﻿using eAgenda.Dominio.TarefaModule;
+﻿using eAgenda.Dominio.Shared;
+using eAgenda.Dominio.TarefaModule;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace eAgenda.WindowsApp.Shared
     {
         DataGridViewColumn[] ObterColunas();
         int ObtemIdSelecionado();
-        void AtualizarRegistros(List<Tarefa> tarefas);
+        void AtualizarRegistros(List<EntidadeBase> tarefas); 
 
     }
 }

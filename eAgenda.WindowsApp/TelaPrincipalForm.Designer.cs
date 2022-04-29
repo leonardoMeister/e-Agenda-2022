@@ -47,6 +47,8 @@ namespace eAgenda.WindowsApp
             this.panelRegistros = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.labelRodape = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolboxAcoes.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -59,7 +61,6 @@ namespace eAgenda.WindowsApp
             this.cadastrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(875, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -71,7 +72,7 @@ namespace eAgenda.WindowsApp
             this.menuItemContato,
             this.menuItemCompromissos});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // menuItemTarefas
@@ -113,6 +114,8 @@ namespace eAgenda.WindowsApp
             this.btnExcluir,
             this.toolStripSeparator1,
             this.btnFiltrar,
+            this.toolStripButton1,
+            this.toolStripButton2,
             this.toolStripSeparator2,
             this.labelTipoCadastro});
             this.toolboxAcoes.Location = new System.Drawing.Point(0, 28);
@@ -191,7 +194,7 @@ namespace eAgenda.WindowsApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelRegistros.Location = new System.Drawing.Point(16, 84);
-            this.panelRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.panelRegistros.Name = "panelRegistros";
             this.panelRegistros.Size = new System.Drawing.Size(843, 564);
             this.panelRegistros.TabIndex = 3;
@@ -214,6 +217,24 @@ namespace eAgenda.WindowsApp
             this.labelRodape.Size = new System.Drawing.Size(83, 20);
             this.labelRodape.Text = "Tudo Ok ;-)";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_compress_black_24dp;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 38);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_expand_black_24dp;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 38);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
             // TelaPrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,7 +245,7 @@ namespace eAgenda.WindowsApp
             this.Controls.Add(this.toolboxAcoes);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(890, 733);
             this.Name = "TelaPrincipalForm";
             this.ShowIcon = false;
@@ -260,6 +281,8 @@ namespace eAgenda.WindowsApp
         private System.Windows.Forms.ToolStripMenuItem menuItemCompromissos;
         private System.Windows.Forms.ToolStripButton btnFiltrar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }
 

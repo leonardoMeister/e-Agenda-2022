@@ -182,7 +182,7 @@ namespace eAgenda.ConsoleApp.TarefaModule
 
             PegarItensDaTarefa(lista);
 
-            Tarefa tar = new Tarefa(titulo, DateTime.Now.Date, (PrioridadeEnum)prioridade, lista, tipoAcao.ToString());
+            Tarefa tar = new Tarefa(titulo, DateTime.Now.Date, (PrioridadeEnum)prioridade, lista, tipoAcao);
 
             return tar;
         }

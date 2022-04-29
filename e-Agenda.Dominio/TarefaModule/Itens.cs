@@ -23,6 +23,11 @@ namespace eAgenda.Dominio.TarefaModule
         {
             this._porcentagem = perc;
         }
+        public override string ToString()
+        {
+            string aux = (_porcentagem == 100) ? "Concluido" : "Sem concluir";
+            return $"Titulo Item: {_descricao}, Status Conclusao: {aux}";
+        }
         public string Validar()
         {
             string str = "";

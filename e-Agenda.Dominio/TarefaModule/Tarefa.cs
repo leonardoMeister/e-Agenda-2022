@@ -12,27 +12,38 @@ namespace eAgenda.Dominio.TarefaModule
 
         public Prioridade Prioridade { get; }
 
-        public DateTime DataCriacao { get; set; }
+        public DateTime? DataCriacao { get; set; }
 
         public int Percentual { get; private set; }
 
         public DateTime? DataConclusao { get; private set; }
         public List<Itens> ListaItens { get; private set; }
 
-        public Tarefa(string titulo, DateTime dataCriacao, PrioridadeEnum prioridade, List<Itens> lista, string tipoAcao)
+        public Tarefa()
+        {
+            this._id = 0;
+            ListaItens = new List<Itens>();
+        }
+
+        public Tarefa(string titulo, DateTime? dataCriacao, PrioridadeEnum prioridade, List<Itens> lista, TipoAcao tipoAcao, Tarefa tar = null)
         {
             Titulo = titulo;
-            DataCriacao = dataCriacao.Date;
+            if (!(dataCriacao is null))
+                DataCriacao = dataCriacao.Value;
             Prioridade = new Prioridade(prioridade);
             ListaItens = lista;
             GerarPorcentagemTarefa();
-            if (tipoAcao == "Inserindo")
+            if (tipoAcao.ToString() == TipoAcao.Inserindo.ToString())
             {
                 GerarId();
+            } else if (tipoAcao.ToString() == TipoAcao.Editando.ToString())
+            {
+                this._id = tar._id;
+                this.DataCriacao = tar.DataCriacao;
             }
         }
         public bool AtualizarPercentualLista(List<int> lista)
-        {
+        {       
             if (!ValidarPorcentagens(lista)) return false;
 
             for (int x = 0; x < lista.Count; x++)
@@ -44,6 +55,11 @@ namespace eAgenda.Dominio.TarefaModule
         }
         private void GerarPorcentagemTarefa()
         {
+            if(ListaItens.Count <= 0)
+            {
+                Percentual = 0;
+                return;
+            }
             int soma = 0;
             foreach (Itens item in ListaItens)
             {

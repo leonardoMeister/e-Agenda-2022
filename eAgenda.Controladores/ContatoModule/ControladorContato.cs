@@ -1,8 +1,10 @@
 ﻿using eAgenda.Controladores.Shared;
 using eAgenda.Dominio.ContatoModule;
+using eAgenda.Dominio.Shared;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace eAgenda.Controladores.ContatoModule
 {
@@ -15,5 +17,9 @@ namespace eAgenda.Controladores.ContatoModule
             return new AgrupadorContato().Agrupar(contatos, campo);
         }
 
+        public List<EntidadeBase> SelecionarContatosEmOrdemAlfabetica()
+        {
+            return base.SelecionarTodos().OrderBy(x => x.Nome).Cast<EntidadeBase>().ToList();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using eAgenda.Dominio.TarefaModule;
+﻿using eAgenda.Dominio.Shared;
+using eAgenda.Dominio.TarefaModule;
 using eAgenda.WindowsApp.Shared;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes
             gridTarefas.Columns.AddRange(ObterColunas());
         }
 
-        public void AtualizarRegistros(List<Tarefa> tarefas)
+        public void AtualizarRegistros(List<EntidadeBase> tarefas)
         {
             gridTarefas.Rows.Clear();
 
