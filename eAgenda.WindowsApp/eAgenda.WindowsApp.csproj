@@ -185,6 +185,7 @@
     <EmbeddedResource Include="TelaPrincipalForm.resx">
       <DependentUpon>TelaPrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,16 +239,15 @@
     <Content Include="Libraries\DataGridViewGrouper.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\E-Agenda 28-04\e-Agenda.Dominio\eAgenda.Dominio.csproj">
+    <ProjectReference Include="..\e-Agenda.Dominio\eAgenda.Dominio.csproj">
       <Project>{d961c68a-ebeb-40ac-b35d-469267ee4514}</Project>
       <Name>eAgenda.Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\E-Agenda 28-04\eAgenda.Controladores\eAgenda.Controladores.csproj">
+    <ProjectReference Include="..\eAgenda.Controladores\eAgenda.Controladores.csproj">
       <Project>{4017e73e-8feb-4de8-8c3c-66178b41a902}</Project>
       <Name>eAgenda.Controladores</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
