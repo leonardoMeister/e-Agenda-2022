@@ -72,9 +72,9 @@
       <Project>{d961c68a-ebeb-40ac-b35d-469267ee4514}</Project>
       <Name>eAgenda.Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\teste1\eAgenda.Infra.Serializador.csproj">
-      <Project>{1a240cd3-3992-4286-b34e-24896ed922b6}</Project>
-      <Name>eAgenda.Infra.Serializador</Name>
+    <ProjectReference Include="..\eAgenda.Serializador\eAgenda.Serializador.csproj">
+      <Project>{5db079b0-0c89-4fab-b82a-97909ebd7f2e}</Project>
+      <Name>eAgenda.Serializador</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

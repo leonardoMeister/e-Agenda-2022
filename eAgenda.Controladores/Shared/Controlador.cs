@@ -1,5 +1,7 @@
 ﻿using eAgenda.Dominio.Shared;
 using eAgenda.Dominio.TarefaModule;
+using eAgenda.Serializador.ModulosSerializador.TarefaSerial;
+using eAgenda.Serializador.Shared;
 using System;
 using System.Collections.Generic;
 
@@ -9,6 +11,26 @@ namespace eAgenda.Controladores.Shared
     {
         public List<T> lista = new List<T>();
 
+        SerializadorBase<T> serializador;
+
+        public Controlador(SerializadorBase<T> serial )
+        {
+            if (SerialNaoEhNulo())
+            {
+                serializador = serial;
+                lista =  serializador.CarregarTarefasDoArquivo();
+            }
+        }
+
+        public Controlador()
+        {
+        }
+
+        private  bool SerialNaoEhNulo()
+        {
+            return !(serializador is null);
+        }
+
         public virtual string InserirNovo(T registro)
         {
             string resultadoValidacao = registro.Validar();
@@ -16,6 +38,10 @@ namespace eAgenda.Controladores.Shared
             if (resultadoValidacao == "ESTA_VALIDO")
             {
                 lista.Add(registro);
+                if (SerialNaoEhNulo())
+                {
+                    serializador.GravarTarefasEmArquivo(lista);
+                }
                 return "ESTA_VALIDO";
             }
             else
@@ -29,6 +55,10 @@ namespace eAgenda.Controladores.Shared
             {
                 registro._id = id;
                 lista[lista.FindIndex(x => x._id == id)] = registro;
+                if (SerialNaoEhNulo())
+                {
+                    serializador.GravarTarefasEmArquivo(lista);
+                }
                 return "ESTA_VALIDO";
             }
             else
@@ -42,6 +72,10 @@ namespace eAgenda.Controladores.Shared
         public virtual bool Excluir(int id)
         {
             lista.RemoveAt(lista.FindIndex(x => x._id == id));
+            if (SerialNaoEhNulo())
+            {
+                serializador.GravarTarefasEmArquivo(lista);
+            }
             return true;
         }
         public virtual List<T> SelecionarTodos()

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 
-namespace teste1.Shared
+namespace eAgenda.Serializador.Shared
 {
-    public abstract class SerializadorBase<T> where T : EntidadeBase
+    public  class SerializadorBase<T> where T : EntidadeBase
     {
 
-        public abstract string CaminhoArquivoJson { get; }
+        public virtual string CaminhoArquivoJson { get; }
 
         public List<T> CarregarTarefasDoArquivo()
         {
