@@ -17,7 +17,7 @@ namespace eAgenda.Dominio.CompromissoModule
         private static int id = 1;
 
         public Compromisso(string assunto, string local, string link, DateTime data,
-           TimeSpan horaInicio, TimeSpan horaFim, Contato contato, string tipoAcao)
+           TimeSpan horaInicio, TimeSpan horaFim, Contato contato, TipoAcao tipoAcao)
         {
             Assunto = assunto;
             Local = local;
@@ -26,7 +26,7 @@ namespace eAgenda.Dominio.CompromissoModule
             HoraInicio = horaInicio;
             HoraTermino = horaFim;
             Contato = contato;
-            if (tipoAcao == "Inserindo")
+            if (tipoAcao.ToString() == TipoAcao.Inserindo.ToString())
             {
                 GerarId();
             }

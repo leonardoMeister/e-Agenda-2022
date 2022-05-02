@@ -69,6 +69,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modulos\MolCompromisso\ColetaDados\CadastroCompromissoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\MolCompromisso\ColetaDados\CadastroCompromissoForm.Designer.cs">
+      <DependentUpon>CadastroCompromissoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\MolCompromisso\ColetaDados\FiltroCompromissoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\MolCompromisso\ColetaDados\FiltroCompromissoForm.Designer.cs">
+      <DependentUpon>FiltroCompromissoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\MolCompromisso\Configuracoes\AcoesCompromisso.cs" />
+    <Compile Include="Modulos\MolCompromisso\Configuracoes\ConfiguracaoCompromissoToolBox.cs" />
+    <Compile Include="Modulos\MolCompromisso\Configuracoes\FiltroCompromissoEnum.cs" />
+    <Compile Include="Modulos\MolCompromisso\Configuracoes\TabelaListaCompromissos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\MolCompromisso\Configuracoes\TabelaListaCompromissos.Designer.cs">
+      <DependentUpon>TabelaListaCompromissos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\MolContato\ColetaDados\CadastroContatoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +145,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Modulos\MolCompromisso\ColetaDados\CadastroCompromissoForm.resx">
+      <DependentUpon>CadastroCompromissoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\MolCompromisso\ColetaDados\FiltroCompromissoForm.resx">
+      <DependentUpon>FiltroCompromissoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\MolCompromisso\Configuracoes\TabelaListaCompromissos.resx">
+      <DependentUpon>TabelaListaCompromissos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulos\MolContato\ColetaDados\CadastroContatoForm.resx">
       <DependentUpon>CadastroContatoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,10 +247,7 @@
       <Name>eAgenda.Controladores</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modulos\MolCompromisso\ColetaDados\" />
-    <Folder Include="Modulos\MolCompromisso\Configuracoes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

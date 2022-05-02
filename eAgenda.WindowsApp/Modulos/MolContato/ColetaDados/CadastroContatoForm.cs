@@ -1,4 +1,5 @@
-﻿using eAgenda.Dominio.ContatoModule;
+﻿using eAgenda.Controladores.ContatoModule;
+using eAgenda.Dominio.ContatoModule;
 using eAgenda.Dominio.Shared;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace eAgenda.WindowsApp.Modulos.MolContato.ColetaDados
     public partial class CadastroContatoForm : Form
     {
         private Contato contato;
+        
         public CadastroContatoForm()
         {
             InitializeComponent();

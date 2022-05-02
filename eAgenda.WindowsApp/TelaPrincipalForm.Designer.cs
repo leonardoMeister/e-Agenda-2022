@@ -34,7 +34,7 @@ namespace eAgenda.WindowsApp
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemTarefas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItemContato = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItemCompromissos = new System.Windows.Forms.ToolStripMenuItem();
+            this.nOVOCOMPROToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolboxAcoes = new System.Windows.Forms.ToolStrip();
             this.btnAdicionar = new System.Windows.Forms.ToolStripButton();
@@ -42,13 +42,13 @@ namespace eAgenda.WindowsApp
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnFiltrar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.labelTipoCadastro = new System.Windows.Forms.ToolStripLabel();
             this.panelRegistros = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.labelRodape = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolboxAcoes.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -61,7 +61,7 @@ namespace eAgenda.WindowsApp
             this.cadastrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(875, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(902, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,16 +70,16 @@ namespace eAgenda.WindowsApp
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItemTarefas,
             this.menuItemContato,
-            this.menuItemCompromissos});
+            this.nOVOCOMPROToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // menuItemTarefas
             // 
             this.menuItemTarefas.Name = "menuItemTarefas";
             this.menuItemTarefas.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.menuItemTarefas.Size = new System.Drawing.Size(214, 26);
+            this.menuItemTarefas.Size = new System.Drawing.Size(208, 26);
             this.menuItemTarefas.Text = "Tarefas";
             this.menuItemTarefas.Click += new System.EventHandler(this.menuItemTarefas_Click);
             // 
@@ -87,17 +87,17 @@ namespace eAgenda.WindowsApp
             // 
             this.menuItemContato.Name = "menuItemContato";
             this.menuItemContato.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.menuItemContato.Size = new System.Drawing.Size(214, 26);
+            this.menuItemContato.Size = new System.Drawing.Size(208, 26);
             this.menuItemContato.Text = "Contatos";
             this.menuItemContato.Click += new System.EventHandler(this.menuItemContato_Click);
             // 
-            // menuItemCompromissos
+            // nOVOCOMPROToolStripMenuItem
             // 
-            this.menuItemCompromissos.Name = "menuItemCompromissos";
-            this.menuItemCompromissos.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.menuItemCompromissos.Size = new System.Drawing.Size(214, 26);
-            this.menuItemCompromissos.Text = "Compromissos";
-            this.menuItemCompromissos.Click += new System.EventHandler(this.menuItemCompromissos_Click);
+            this.nOVOCOMPROToolStripMenuItem.Name = "nOVOCOMPROToolStripMenuItem";
+            this.nOVOCOMPROToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.nOVOCOMPROToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
+            this.nOVOCOMPROToolStripMenuItem.Text = "Compromisso";
+            this.nOVOCOMPROToolStripMenuItem.Click += new System.EventHandler(this.menuItemCompromisso_Click);
             // 
             // contextMenuStrip1
             // 
@@ -120,7 +120,7 @@ namespace eAgenda.WindowsApp
             this.labelTipoCadastro});
             this.toolboxAcoes.Location = new System.Drawing.Point(0, 28);
             this.toolboxAcoes.Name = "toolboxAcoes";
-            this.toolboxAcoes.Size = new System.Drawing.Size(875, 41);
+            this.toolboxAcoes.Size = new System.Drawing.Size(902, 41);
             this.toolboxAcoes.TabIndex = 2;
             this.toolboxAcoes.Text = "toolStrip1";
             // 
@@ -177,6 +177,24 @@ namespace eAgenda.WindowsApp
             this.btnFiltrar.Text = "toolStripButton1";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_compress_black_24dp;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 38);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_expand_black_24dp;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 38);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
@@ -196,7 +214,7 @@ namespace eAgenda.WindowsApp
             this.panelRegistros.Location = new System.Drawing.Point(16, 84);
             this.panelRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.panelRegistros.Name = "panelRegistros";
-            this.panelRegistros.Size = new System.Drawing.Size(843, 564);
+            this.panelRegistros.Size = new System.Drawing.Size(870, 564);
             this.panelRegistros.TabIndex = 3;
             // 
             // statusStrip1
@@ -207,7 +225,7 @@ namespace eAgenda.WindowsApp
             this.statusStrip1.Location = new System.Drawing.Point(0, 669);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(875, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(902, 26);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -217,29 +235,11 @@ namespace eAgenda.WindowsApp
             this.labelRodape.Size = new System.Drawing.Size(83, 20);
             this.labelRodape.Text = "Tudo Ok ;-)";
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_compress_black_24dp;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 38);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_expand_black_24dp;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 38);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
             // TelaPrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 695);
+            this.ClientSize = new System.Drawing.Size(902, 695);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panelRegistros);
             this.Controls.Add(this.toolboxAcoes);
@@ -278,11 +278,11 @@ namespace eAgenda.WindowsApp
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel labelRodape;
         private System.Windows.Forms.ToolStripMenuItem menuItemContato;
-        private System.Windows.Forms.ToolStripMenuItem menuItemCompromissos;
         private System.Windows.Forms.ToolStripButton btnFiltrar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripMenuItem nOVOCOMPROToolStripMenuItem;
     }
 }
 

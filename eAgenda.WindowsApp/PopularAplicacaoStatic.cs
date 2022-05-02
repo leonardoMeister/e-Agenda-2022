@@ -66,27 +66,27 @@ namespace eAgenda.WindowsApp
             //Compromisso de hoje
             Compromisso compromisso1 = new Compromisso("Ir na casa de pedro", "casa do pedro", "Presencial",
                 DateTime.Now.Date,
-                new TimeSpan(12, 00, 0), new TimeSpan(13, 00, 0), contato3, TipoAcao.Inserindo.ToString());
+                new TimeSpan(12, 00, 0), new TimeSpan(13, 00, 0), contato3, TipoAcao.Inserindo);
             //Compromisso futuro
             Compromisso compromisso2 = new Compromisso("Falar com professora", "Remoto", "https://meetPedrao.com.br",
                 new DateTime((DateTime.Now).AddDays(500).Year, DateTime.Now.Month, DateTime.Now.Day),
-                new TimeSpan(14, 00, 0), new TimeSpan(20, 00, 0), contato1, TipoAcao.Inserindo.ToString());
+                new TimeSpan(14, 00, 0), new TimeSpan(20, 00, 0), contato1, TipoAcao.Inserindo);
             //Compromisso passado
             Compromisso compromisso3 = new Compromisso("Ver notas filho", "Escola", "Presencial",
                 new DateTime((DateTime.Now).AddDays(-500).Year, DateTime.Now.Month, DateTime.Now.Day),
-                new TimeSpan(8, 00, 0), new TimeSpan(10, 00, 0), contato2, TipoAcao.Inserindo.ToString());
+                new TimeSpan(8, 00, 0), new TimeSpan(10, 00, 0), contato2, TipoAcao.Inserindo);
             //Compromisso Um dia no futuro
             Compromisso compromisso4 = new Compromisso("ir em algum lugar", "nao sei onde", "Presencial",
                 new DateTime(DateTime.Now.Year, DateTime.Now.Month, (DateTime.Now.AddDays(1)).Day),
-                new TimeSpan(20, 00, 0), new TimeSpan(22, 00, 0), null, TipoAcao.Inserindo.ToString());
+                new TimeSpan(20, 00, 0), new TimeSpan(22, 00, 0), null, TipoAcao.Inserindo);
             //Compromisso Um dia no passado
             Compromisso compromisso5 = new Compromisso("ir em uma festa", "nao sei onde", "Presencial",
                 new DateTime(DateTime.Now.Year, DateTime.Now.Month, (DateTime.Now.AddDays(-1)).Day),
-                new TimeSpan(22, 00, 0), new TimeSpan(23, 00, 0), null, TipoAcao.Inserindo.ToString());
+                new TimeSpan(22, 00, 0), new TimeSpan(23, 00, 0), null, TipoAcao.Inserindo);
             //Compromisso no dia de hoje de novo
             Compromisso compromisso6 = new Compromisso("beber agua", "cozinha", "Presencial",
                 DateTime.Now.Date,
-                new TimeSpan(9, 00, 0), new TimeSpan(9, 30, 0), null, TipoAcao.Inserindo.ToString());
+                new TimeSpan(9, 00, 0), new TimeSpan(9, 30, 0), null, TipoAcao.Inserindo);
 
             controladorCompromisso.InserirNovo(compromisso1);
             controladorCompromisso.InserirNovo(compromisso2);

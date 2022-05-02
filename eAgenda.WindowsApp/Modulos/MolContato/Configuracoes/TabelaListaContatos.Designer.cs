@@ -34,6 +34,7 @@
             // 
             // gridContato
             // 
+            this.gridContato.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridContato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridContato.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridContato.Location = new System.Drawing.Point(0, 0);

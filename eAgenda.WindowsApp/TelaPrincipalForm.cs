@@ -1,6 +1,7 @@
 ﻿using eAgenda.Controladores.CompromissoModule;
 using eAgenda.Controladores.ContatoModule;
 using eAgenda.Controladores.TarefaModule;
+using eAgenda.WindowsApp.Modulos.MolCompromisso.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolContato.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes;
 using eAgenda.WindowsApp.Shared;
@@ -32,7 +33,7 @@ namespace eAgenda.WindowsApp
             controladorTarefa = new ControladorTarefa();
             controladorContato = new ControladorContato();
             controladorCompromisso = new ControladorCompromisso();
-            PopularAplicacaoStatic.PopularAplicacao(controladorContato,controladorTarefa,controladorCompromisso);
+            PopularAplicacaoStatic.PopularAplicacao(controladorContato, controladorTarefa, controladorCompromisso);
             Instancia = this;
         }
 
@@ -57,7 +58,7 @@ namespace eAgenda.WindowsApp
 
         private void menuItemContato_Click(object sender, EventArgs e)
         {
-            
+
             ConfiguracaoContatoToolBox configuracao = new ConfiguracaoContatoToolBox();
 
             ConfigurarToolBox(configuracao);
@@ -68,18 +69,29 @@ namespace eAgenda.WindowsApp
 
             ConfigurarPainelRegistros();
         }
-
-        private void menuItemCompromissos_Click(object sender, EventArgs e)
-        {/*
+        private void menuItemCompromisso_Click(object sender, EventArgs e)
+        {
             ConfiguracaoContatoToolBox configuracao = new ConfiguracaoContatoToolBox();
 
             ConfigurarToolBox(configuracao);
 
             AtualizarRodape(configuracao.TipoCadastro);
 
-            operacoes = new OperacoesCompromisso(new ControladorCompromisso(), new ControladorContato());
+            operacoes = new AcoesCompromisso(controladorCompromisso, controladorContato);
 
-            ConfigurarPainelRegistros();*/
+            ConfigurarPainelRegistros();
+        }
+        private void menuItemCompromissos_Click(object sender, EventArgs e)
+        {
+            ConfiguracaoContatoToolBox configuracao = new ConfiguracaoContatoToolBox();
+
+            ConfigurarToolBox(configuracao);
+
+            AtualizarRodape(configuracao.TipoCadastro);
+
+            operacoes = new AcoesCompromisso(controladorCompromisso, controladorContato);
+
+            ConfigurarPainelRegistros();
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -111,8 +123,16 @@ namespace eAgenda.WindowsApp
             UserControl tabela = operacoes.ObterTabela();
 
             panelRegistros.Controls.Clear();
+            try
+            {
+                
+                panelRegistros.Controls.Add(tabela);  //DE VEZ EM QUANDO DA PAL AQUI SÓ QUANDO É COMPROMISSO, MUICHO LOCO
+            }catch (Exception ex)
+            {
 
-            panelRegistros.Controls.Add(tabela); 
+            }
+            
+
             tabela.Dock = DockStyle.Fill;
 
         }
@@ -124,6 +144,7 @@ namespace eAgenda.WindowsApp
             btnEditar.ToolTipText = configuracao.ToolTipEditar;
             btnExcluir.ToolTipText = configuracao.ToolTipExcluir;
         }
+
 
     }
 }

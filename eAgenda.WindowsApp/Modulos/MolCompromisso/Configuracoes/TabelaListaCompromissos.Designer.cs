@@ -1,6 +1,6 @@
-﻿namespace eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes
+﻿namespace eAgenda.WindowsApp.Modulos.MolCompromisso.Configuracoes
 {
-    partial class TabelaListaTarefas
+    partial class TabelaListaCompromissos
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridTarefas = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTarefas)).BeginInit();
+            this.gridCompromisso = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCompromisso)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridTarefas
+            // gridCompromisso
             // 
-            this.gridTarefas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridTarefas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTarefas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridTarefas.Location = new System.Drawing.Point(0, 0);
-            this.gridTarefas.Margin = new System.Windows.Forms.Padding(4);
-            this.gridTarefas.Name = "gridTarefas";
-            this.gridTarefas.RowHeadersWidth = 51;
-            this.gridTarefas.Size = new System.Drawing.Size(603, 475);
-            this.gridTarefas.TabIndex = 1;
+            this.gridCompromisso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridCompromisso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridCompromisso.Location = new System.Drawing.Point(0, 0);
+            this.gridCompromisso.Margin = new System.Windows.Forms.Padding(4);
+            this.gridCompromisso.Name = "gridCompromisso";
+            this.gridCompromisso.RowHeadersWidth = 51;
+            this.gridCompromisso.Size = new System.Drawing.Size(603, 475);
+            this.gridCompromisso.TabIndex = 2;
             // 
-            // TabelaListaTarefas
+            // TabelaListaCompromissos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gridTarefas);
-            this.Name = "TabelaListaTarefas";
+            this.Controls.Add(this.gridCompromisso);
+            this.Name = "TabelaListaCompromissos";
             this.Size = new System.Drawing.Size(603, 475);
-            ((System.ComponentModel.ISupportInitialize)(this.gridTarefas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCompromisso)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gridTarefas;
+        private System.Windows.Forms.DataGridView gridCompromisso;
     }
 }

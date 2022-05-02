@@ -224,7 +224,7 @@ namespace eAgenda.ConsoleApp.CompromissoModule
                 local = "Remoto";
             }
 
-            Compromisso comp = new Compromisso(assunto, local, link, data, horaInicio, horaFim, contato, tipoAcao.ToString());
+            Compromisso comp = new Compromisso(assunto, local, link, data, horaInicio, horaFim, contato, tipoAcao);
             return comp;
         }
     }
