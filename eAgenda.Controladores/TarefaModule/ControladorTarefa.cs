@@ -1,5 +1,6 @@
 ﻿using eAgenda.Controladores.Shared;
 using eAgenda.Dominio.TarefaModule;
+using eAgenda.Serializador.Shared;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,6 +10,14 @@ namespace eAgenda.Controladores.TarefaModule
 {
     public class ControladorTarefa : Controlador<Tarefa>
     {
+        public ControladorTarefa()
+        {
+        }
+
+        public ControladorTarefa(SerializadorBase<Tarefa> serial) : base(serial)
+        {
+        }
+
         public override string Editar(int id, Tarefa registro)
         {
             string resultadoValidacao = registro.Validar();

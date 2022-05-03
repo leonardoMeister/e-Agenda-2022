@@ -247,6 +247,10 @@
       <Project>{4017e73e-8feb-4de8-8c3c-66178b41a902}</Project>
       <Name>eAgenda.Controladores</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eAgenda.Serializador\eAgenda.Serializador.csproj">
+      <Project>{5db079b0-0c89-4fab-b82a-97909ebd7f2e}</Project>
+      <Name>eAgenda.Serializador</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

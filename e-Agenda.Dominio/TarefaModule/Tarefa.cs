@@ -8,16 +8,16 @@ namespace eAgenda.Dominio.TarefaModule
     public class Tarefa : EntidadeBase, IEquatable<Tarefa>
     {
         private static int id = 1;
-        public string Titulo { get; }
+        public string Titulo { get; set; }
 
-        public Prioridade Prioridade { get; }
+        public Prioridade Prioridade { get; set; }
 
         public DateTime? DataCriacao { get; set; }
 
-        public int Percentual { get; private set; }
+        public int Percentual { get; set; }
 
-        public DateTime? DataConclusao { get; private set; }
-        public List<Itens> ListaItens { get; private set; }
+        public DateTime? DataConclusao { get;  set; }
+        public List<Itens> ListaItens { get;  set; }
 
         public Tarefa()
         {

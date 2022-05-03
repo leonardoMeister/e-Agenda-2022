@@ -1,5 +1,6 @@
 ﻿using eAgenda.Controladores.Shared;
 using eAgenda.Dominio.CompromissoModule;
+using eAgenda.Serializador.Shared;
 using System;
 using System.Collections.Generic;
 
@@ -7,6 +8,15 @@ namespace eAgenda.Controladores.CompromissoModule
 {
     public class ControladorCompromisso : Controlador<Compromisso>
     {
+        public ControladorCompromisso()
+        {
+        }
+
+        public ControladorCompromisso(SerializadorBase<Compromisso> serial) : base(serial)
+        {
+
+        }
+
         public override string InserirNovo(Compromisso registro)
         {
             string resultadoValidacao = registro.Validar();

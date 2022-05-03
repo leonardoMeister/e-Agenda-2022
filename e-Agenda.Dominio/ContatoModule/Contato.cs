@@ -7,11 +7,11 @@ namespace eAgenda.Dominio.ContatoModule
 {
     public class Contato : EntidadeBase, IEquatable<Contato>
     {        
-        public string Nome { get; }
-        public string Email { get; }
-        public string Telefone { get; }
-        public string Cargo { get; }
-        public string Empresa { get; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Telefone { get; set; }
+        public string Cargo { get; set; }
+        public string Empresa { get; set; }
         private static int id = 1;
 
         public Contato(string nome, string email, string telefone, string empresa, string cargo, TipoAcao tipoAcao)

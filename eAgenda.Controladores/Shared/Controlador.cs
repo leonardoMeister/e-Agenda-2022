@@ -15,6 +15,8 @@ namespace eAgenda.Controladores.Shared
 
         public Controlador(SerializadorBase<T> serial )
         {
+            serializador = serial;
+
             if (SerialNaoEhNulo())
             {
                 serializador = serial;

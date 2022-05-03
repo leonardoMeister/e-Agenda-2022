@@ -1,6 +1,9 @@
 ﻿using eAgenda.Controladores.CompromissoModule;
 using eAgenda.Controladores.ContatoModule;
 using eAgenda.Controladores.TarefaModule;
+using eAgenda.Serializador.ModulosSerializador.CompromissoSerial;
+using eAgenda.Serializador.ModulosSerializador.ContatoSerial;
+using eAgenda.Serializador.ModulosSerializador.TarefaSerial;
 using eAgenda.WindowsApp.Modulos.MolCompromisso.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolContato.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes;
@@ -30,10 +33,12 @@ namespace eAgenda.WindowsApp
         public TelaPrincipalForm()
         {
             InitializeComponent();
-            controladorTarefa = new ControladorTarefa();
-            controladorContato = new ControladorContato();
-            controladorCompromisso = new ControladorCompromisso();
-            PopularAplicacaoStatic.PopularAplicacao(controladorContato, controladorTarefa, controladorCompromisso);
+            controladorTarefa = new ControladorTarefa(new TarefaSerializador());
+            controladorContato = new ControladorContato(new ContatoSerializador());
+            controladorCompromisso = new ControladorCompromisso(new CompromissoSerializador());
+            
+            //PopularAplicacaoStatic.PopularAplicacao(controladorContato, controladorTarefa, controladorCompromisso);
+
             Instancia = this;
         }
 
