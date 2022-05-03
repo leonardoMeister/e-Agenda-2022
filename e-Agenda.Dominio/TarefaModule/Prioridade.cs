@@ -4,7 +4,7 @@ namespace eAgenda.Dominio.TarefaModule
 {
     public struct Prioridade
     {
-        private PrioridadeEnum prioridade;
+        public PrioridadeEnum prioridade;
 
         public Prioridade(PrioridadeEnum prioridade)
         {
@@ -16,6 +16,10 @@ namespace eAgenda.Dominio.TarefaModule
             get
             {
                 return (int)prioridade;
+            }
+            set
+            {
+                value = (int)prioridade;
             }
         }
 

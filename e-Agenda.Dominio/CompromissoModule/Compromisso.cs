@@ -7,13 +7,13 @@ namespace eAgenda.Dominio.CompromissoModule
 {
     public class Compromisso : EntidadeBase, IEquatable<Compromisso>
     {        
-        public string Assunto { get; }
-        public string Local { get; }
-        public string Link { get; }
-        public DateTime Data { get; }
-        public TimeSpan HoraInicio { get; }
-        public TimeSpan HoraTermino { get; }
-        public Contato Contato { get; }
+        public string Assunto { get; set; }
+        public string Local { get; set; }
+        public string Link { get; set; }
+        public DateTime Data { get; set; }
+        public TimeSpan HoraInicio { get; set; }
+        public TimeSpan HoraTermino { get; set; }
+        public Contato Contato { get; set; }
         private static int id = 1;
 
         public Compromisso(string assunto, string local, string link, DateTime data,
