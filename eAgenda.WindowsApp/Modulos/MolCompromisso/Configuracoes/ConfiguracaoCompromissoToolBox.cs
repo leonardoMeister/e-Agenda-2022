@@ -16,5 +16,11 @@ namespace eAgenda.WindowsApp.Modulos.MolCompromisso.Configuracoes
         public string ToolTipEditar => "Editar um Compromisso existente";
 
         public string ToolTipExcluir => "Excluir um Compromisso existente";
+
+        public string ToolTipoFiltrar => "Filtro de Compromissos";
+
+        public bool DessagruparItens => false;
+
+        public bool AgruparItens => false;
     }
 }

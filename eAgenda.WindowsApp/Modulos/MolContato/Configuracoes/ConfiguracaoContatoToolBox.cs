@@ -16,5 +16,11 @@ namespace eAgenda.WindowsApp.Modulos.MolContato.Configuracoes
         public string ToolTipEditar => "Editar um Contato existente";
 
         public string ToolTipExcluir => "Excluir um Contato existente";
+
+        public string ToolTipoFiltrar => "Filtro de Contatos";
+
+        public bool DessagruparItens => true;
+
+        public bool AgruparItens => true;
     }
 }

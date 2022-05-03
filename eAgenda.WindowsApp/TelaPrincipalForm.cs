@@ -36,7 +36,7 @@ namespace eAgenda.WindowsApp
             controladorTarefa = new ControladorTarefa(new TarefaSerializador());
             controladorContato = new ControladorContato(new ContatoSerializador());
             controladorCompromisso = new ControladorCompromisso(new CompromissoSerializador());
-            
+
             //PopularAplicacaoStatic.PopularAplicacao(controladorContato, controladorTarefa, controladorCompromisso);
 
             Instancia = this;
@@ -76,7 +76,7 @@ namespace eAgenda.WindowsApp
         }
         private void menuItemCompromisso_Click(object sender, EventArgs e)
         {
-            ConfiguracaoContatoToolBox configuracao = new ConfiguracaoContatoToolBox();
+            ConfiguracaoCompromissoToolBox configuracao = new ConfiguracaoCompromissoToolBox();
 
             ConfigurarToolBox(configuracao);
 
@@ -86,19 +86,6 @@ namespace eAgenda.WindowsApp
 
             ConfigurarPainelRegistros();
         }
-        private void menuItemCompromissos_Click(object sender, EventArgs e)
-        {
-            ConfiguracaoContatoToolBox configuracao = new ConfiguracaoContatoToolBox();
-
-            ConfigurarToolBox(configuracao);
-
-            AtualizarRodape(configuracao.TipoCadastro);
-
-            operacoes = new AcoesCompromisso(controladorCompromisso, controladorContato);
-
-            ConfigurarPainelRegistros();
-        }
-
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             if (!(operacoes is null))
@@ -128,15 +115,8 @@ namespace eAgenda.WindowsApp
             UserControl tabela = operacoes.ObterTabela();
 
             panelRegistros.Controls.Clear();
-            try
-            {
-                
-                panelRegistros.Controls.Add(tabela);  //DE VEZ EM QUANDO DA PAL AQUI SÓ QUANDO É COMPROMISSO, MUICHO LOCO
-            }catch (Exception ex)
-            {
 
-            }
-            
+            panelRegistros.Controls.Add(tabela);
 
             tabela.Dock = DockStyle.Fill;
 
@@ -148,6 +128,14 @@ namespace eAgenda.WindowsApp
             btnAdicionar.ToolTipText = configuracao.ToolTipAdicionar;
             btnEditar.ToolTipText = configuracao.ToolTipEditar;
             btnExcluir.ToolTipText = configuracao.ToolTipExcluir;
+            btnFiltrar.ToolTipText = configuracao.ToolTipoFiltrar;
+
+            if (configuracao.DessagruparItens) btnDessagrupar.Enabled = true;
+            else btnDessagrupar.Enabled = false;
+
+            if (configuracao.AgruparItens) btnAgrupar.Enabled = true;
+            else btnAgrupar.Enabled = false;
+
         }
 
 

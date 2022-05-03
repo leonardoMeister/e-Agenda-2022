@@ -42,8 +42,8 @@ namespace eAgenda.WindowsApp
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnFiltrar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnAgrupar = new System.Windows.Forms.ToolStripButton();
+            this.btnDessagrupar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.labelTipoCadastro = new System.Windows.Forms.ToolStripLabel();
             this.panelRegistros = new System.Windows.Forms.Panel();
@@ -114,8 +114,8 @@ namespace eAgenda.WindowsApp
             this.btnExcluir,
             this.toolStripSeparator1,
             this.btnFiltrar,
-            this.toolStripButton1,
-            this.toolStripButton2,
+            this.btnAgrupar,
+            this.btnDessagrupar,
             this.toolStripSeparator2,
             this.labelTipoCadastro});
             this.toolboxAcoes.Location = new System.Drawing.Point(0, 28);
@@ -177,23 +177,23 @@ namespace eAgenda.WindowsApp
             this.btnFiltrar.Text = "toolStripButton1";
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
-            // toolStripButton1
+            // btnAgrupar
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_compress_black_24dp;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 38);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.btnAgrupar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAgrupar.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_compress_black_24dp;
+            this.btnAgrupar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAgrupar.Name = "btnAgrupar";
+            this.btnAgrupar.Size = new System.Drawing.Size(29, 38);
+            this.btnAgrupar.Text = "toolStripButton1";
             // 
-            // toolStripButton2
+            // btnDessagrupar
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_expand_black_24dp;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 38);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.btnDessagrupar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDessagrupar.Image = global::eAgenda.WindowsApp.Properties.Resources.outline_expand_black_24dp;
+            this.btnDessagrupar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDessagrupar.Name = "btnDessagrupar";
+            this.btnDessagrupar.Size = new System.Drawing.Size(29, 38);
+            this.btnDessagrupar.Text = "toolStripButton2";
             // 
             // toolStripSeparator2
             // 
@@ -280,8 +280,8 @@ namespace eAgenda.WindowsApp
         private System.Windows.Forms.ToolStripMenuItem menuItemContato;
         private System.Windows.Forms.ToolStripButton btnFiltrar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btnAgrupar;
+        private System.Windows.Forms.ToolStripButton btnDessagrupar;
         private System.Windows.Forms.ToolStripMenuItem nOVOCOMPROToolStripMenuItem;
     }
 }

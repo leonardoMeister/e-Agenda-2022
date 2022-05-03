@@ -12,5 +12,10 @@ namespace eAgenda.WindowsApp.Shared
         string TipoCadastro { get; }
         string ToolTipEditar { get; }
         string ToolTipExcluir { get; }
+        string ToolTipoFiltrar { get; }
+        bool DessagruparItens { get; }
+        bool AgruparItens { get; }
+
+
     }
 }

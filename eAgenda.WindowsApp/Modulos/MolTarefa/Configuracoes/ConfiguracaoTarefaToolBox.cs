@@ -16,5 +16,11 @@ namespace eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes
         public string ToolTipEditar => "Editar uma Tarefa existente";
 
         public string ToolTipExcluir => "Excluir uma Tarefa existente";
+
+        public string ToolTipoFiltrar => "Filtro de Tarefas";
+
+        public bool DessagruparItens => false;
+
+        public bool AgruparItens => false;
     }
 }
