@@ -13,6 +13,10 @@ namespace eAgenda.Controladores.TarefaModule
         public ControladorTarefa()
         {
         }
+        public ControladorTarefa(List<Tarefa> lista)
+        {
+            this.lista = lista;
+        }
 
         public ControladorTarefa(SerializadorBase<Tarefa> serial) : base(serial)
         {

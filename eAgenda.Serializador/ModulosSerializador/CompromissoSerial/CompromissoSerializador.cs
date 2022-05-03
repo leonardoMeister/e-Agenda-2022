@@ -17,5 +17,7 @@ namespace eAgenda.Serializador.ModulosSerializador.CompromissoSerial
         {
             caminhoArquivo = ".CompromissoSerial.json";
         }
+
+
     }
 }

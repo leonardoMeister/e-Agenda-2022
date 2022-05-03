@@ -1,9 +1,14 @@
 ﻿using eAgenda.Controladores.CompromissoModule;
 using eAgenda.Controladores.ContatoModule;
 using eAgenda.Controladores.TarefaModule;
+using eAgenda.Dominio.CompromissoModule;
+using eAgenda.Dominio.ContatoModule;
+using eAgenda.Dominio.Shared;
+using eAgenda.Dominio.TarefaModule;
 using eAgenda.Serializador.ModulosSerializador.CompromissoSerial;
 using eAgenda.Serializador.ModulosSerializador.ContatoSerial;
 using eAgenda.Serializador.ModulosSerializador.TarefaSerial;
+using eAgenda.Serializador.Shared;
 using eAgenda.WindowsApp.Modulos.MolCompromisso.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolContato.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes;
@@ -33,15 +38,25 @@ namespace eAgenda.WindowsApp
         public TelaPrincipalForm()
         {
             InitializeComponent();
-            controladorTarefa = new ControladorTarefa(new TarefaSerializador());
-            controladorContato = new ControladorContato(new ContatoSerializador());
-            controladorCompromisso = new ControladorCompromisso(new CompromissoSerializador());
+
+            ContextoDadosDomain contextoDados = new ContextoDadosDomain().CarregarTarefasDoArquivo();
+            
+            controladorTarefa = new ControladorTarefa(contextoDados.ListTarefa);                
+            controladorContato = new ControladorContato(contextoDados.ListContato);
+            controladorCompromisso = new ControladorCompromisso(contextoDados.ListaCompro);
 
             //PopularAplicacaoStatic.PopularAplicacao(controladorContato, controladorTarefa, controladorCompromisso);
-
+           
             Instancia = this;
         }
+        private void TelaPrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show("GRAVANDO DADOS NO SERIALIZADOR");
+            ContextoDadosDomain contexto = new ContextoDadosDomain(controladorCompromisso.SelecionarTodos(), 
+                controladorTarefa.SelecionarTodos(), controladorContato.SelecionarTodos());
 
+            contexto.GravarTarefasEmArquivo(contexto);
+        }
         public void AtualizarRodape(string mensagem)
         {
             labelRodape.Text = mensagem;
@@ -138,6 +153,6 @@ namespace eAgenda.WindowsApp
 
         }
 
-
+ 
     }
 }

@@ -79,6 +79,7 @@
     <Compile Include="ModulosSerializador\ContatoSerial\ContatoSerializador.cs" />
     <Compile Include="ModulosSerializador\TarefaSerial\TarefaSerializador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\ContextoDadosDomain.cs" />
     <Compile Include="Shared\SerializadorBase.cs" />
   </ItemGroup>
   <ItemGroup>

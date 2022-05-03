@@ -11,6 +11,10 @@ namespace eAgenda.Controladores.CompromissoModule
         public ControladorCompromisso()
         {
         }
+        public ControladorCompromisso(List<Compromisso> novaLista)
+        {
+            this.lista = novaLista;
+        }
 
         public ControladorCompromisso(SerializadorBase<Compromisso> serial) : base(serial)
         {

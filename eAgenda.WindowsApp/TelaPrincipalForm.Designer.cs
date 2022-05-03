@@ -251,6 +251,7 @@ namespace eAgenda.WindowsApp
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "e-Agenda: Ajudando a organizar o seu trabalho";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TelaPrincipalForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolboxAcoes.ResumeLayout(false);

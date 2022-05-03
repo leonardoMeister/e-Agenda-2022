@@ -77,13 +77,19 @@ namespace eAgenda.WindowsApp.Modulos.MolCompromisso.ColetaDados
             set
             {
                 compromisso = value;
-                
+                ColocarContato();
                 txtId.Text = compromisso._id.ToString();
                 txtAssunto.Text = compromisso.Assunto;
                 dateCompromisso.Text = compromisso.Data.ToShortDateString();
                 horaInicio.Text = compromisso.HoraInicio.ToString();
                 horaConclusao.Text = compromisso.HoraTermino.ToString();
             }
+        }
+
+        private void ColocarContato()
+        {
+            if (!(compromisso.Contato is null))
+                cmbContato.SelectedItem = compromisso.Contato;
         }
 
         private void CadastroCompromissoForm_FormClosing(object sender, FormClosingEventArgs e)

@@ -15,9 +15,14 @@ namespace eAgenda.Controladores.ContatoModule
         public ControladorContato()
         {
         }
+        public ControladorContato(List<Contato> novaLista)
+        {
+            this.lista = novaLista;
+        }
 
         public ControladorContato(SerializadorBase<Contato> serial) : base(serial)
         {
+
         }
 
         public List<GrupoContato> SelecionarContatosAgrupados(Func<Contato, string> campo)
