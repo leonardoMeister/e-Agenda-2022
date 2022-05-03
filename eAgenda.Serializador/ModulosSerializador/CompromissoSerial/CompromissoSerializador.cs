@@ -15,13 +15,7 @@ namespace eAgenda.Serializador.ModulosSerializador.CompromissoSerial
 
         public CompromissoSerializador()
         {
-            CriarOuEstabelecerCaminhoArquivo();
-        }
-
-        private void CriarOuEstabelecerCaminhoArquivo()
-        {
             caminhoArquivo = ".CompromissoSerial.json";
-
         }
     }
 }

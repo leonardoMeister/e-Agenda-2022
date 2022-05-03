@@ -11,13 +11,7 @@ namespace eAgenda.Serializador.ModulosSerializador.TarefaSerial
 
         public TarefaSerializador()
         {
-            CriarOuEstabelecerCaminhoArquivo();
-        }
-
-        private void CriarOuEstabelecerCaminhoArquivo()
-        {
             caminhoArquivo = ".TarefaSerial.json";
-
         }
     }
 }

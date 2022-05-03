@@ -14,15 +14,8 @@ namespace eAgenda.Serializador.ModulosSerializador.ContatoSerial
         public override string CaminhoArquivoJson => caminhoArquivo;
 
         public ContatoSerializador()
-        { 
-            CriarOuEstabelecerCaminhoArquivo();
-        }
-
-        private void CriarOuEstabelecerCaminhoArquivo()
         {
             caminhoArquivo = ".ContatoSerial.json";
-
         }
-
     }
 }

@@ -10,7 +10,6 @@ namespace eAgenda.Serializador.Shared
 {
     public  class SerializadorBase<T> where T : EntidadeBase
     {
-
         public virtual string CaminhoArquivoJson { get; }
 
         public List<T> CarregarTarefasDoArquivo()
@@ -45,7 +44,6 @@ namespace eAgenda.Serializador.Shared
             string tarefasJson = JsonConvert.SerializeObject(listaEntidadeBase, settings);
 
             File.WriteAllText(CaminhoArquivoJson, tarefasJson);
-
         }
     }
 }
