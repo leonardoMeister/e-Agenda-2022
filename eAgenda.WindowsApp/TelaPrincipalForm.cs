@@ -45,8 +45,13 @@ namespace eAgenda.WindowsApp
             controladorContato = new ControladorContato(contextoDados.ListContato);
             controladorCompromisso = new ControladorCompromisso(contextoDados.ListaCompro);
 
-            //PopularAplicacaoStatic.PopularAplicacao(controladorContato, controladorTarefa, controladorCompromisso);
-           
+            /*
+            controladorTarefa = new ControladorTarefa();
+            controladorContato = new ControladorContato();
+            controladorCompromisso = new ControladorCompromisso();
+
+            PopularAplicacaoStatic.PopularAplicacao(controladorContato, controladorTarefa, controladorCompromisso);
+            */
             Instancia = this;
         }
         private void TelaPrincipalForm_FormClosing(object sender, FormClosingEventArgs e)

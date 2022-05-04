@@ -49,7 +49,7 @@ namespace eAgenda.Serializador.Shared
             JsonSerializerSettings settings = new JsonSerializerSettings();
 
             settings.Formatting = Formatting.Indented;
-
+            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
             ContextoDadosDomain arquivo = JsonConvert.DeserializeObject<ContextoDadosDomain>(tarefasJson, settings);
             if (arquivo is null)
                 return new ContextoDadosDomain();
@@ -65,6 +65,7 @@ namespace eAgenda.Serializador.Shared
             JsonSerializerSettings settings = new JsonSerializerSettings();
 
             settings.Formatting = Formatting.Indented;
+            settings.PreserveReferencesHandling = PreserveReferencesHandling.All;
 
             string tarefasJson = JsonConvert.SerializeObject(contextoDomain, settings);
 

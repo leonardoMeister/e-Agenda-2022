@@ -26,6 +26,7 @@ namespace eAgenda.Controladores.Shared
 
         public Controlador()
         {
+
         }
 
         private  bool SerialNaoEhNulo()
