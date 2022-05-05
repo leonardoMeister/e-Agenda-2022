@@ -1,5 +1,6 @@
 ﻿using eAgenda.Controladores.Shared;
 using eAgenda.Dominio.DespesaModule;
+using eAgenda.Dominio.Shared;
 using eAgenda.Serializador.Shared;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,24 @@ namespace eAgenda.Controladores.DespesaModulo
 
         }
 
+        public List<EntidadeBase> SelecionarTodosOrdenadosPorPreco()
+        {
+            throw new NotImplementedException();
+        }
 
+        public List<EntidadeBase> SelecionarTotalGastoNoMes()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<EntidadeBase> SelecionarTotalGastoPorCategoria()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<EntidadeBase> SelecionarTotalGastoPorCategoriaNoMes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

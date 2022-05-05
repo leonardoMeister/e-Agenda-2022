@@ -111,6 +111,27 @@
     <Compile Include="Modulos\MolContato\Configuracoes\TabelaListaContatos.Designer.cs">
       <DependentUpon>TabelaListaContatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulos\MolDespesa\ColetaDados\CadastroDespesaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\MolDespesa\ColetaDados\CadastroDespesaForm.Designer.cs">
+      <DependentUpon>CadastroDespesaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\MolDespesa\ColetaDados\FiltroDespesaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\MolDespesa\ColetaDados\FiltroDespesaForm.Designer.cs">
+      <DependentUpon>FiltroDespesaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\MolDespesa\Configuracoes\AcoesDespesa.cs" />
+    <Compile Include="Modulos\MolDespesa\Configuracoes\ConfiguracaoDespesaToolBox.cs" />
+    <Compile Include="Modulos\MolDespesa\Configuracoes\FiltroDespesaEnum.cs" />
+    <Compile Include="Modulos\MolDespesa\Configuracoes\TabelaListaDespesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modulos\MolDespesa\Configuracoes\TabelaListaDespesa.Designer.cs">
+      <DependentUpon>TabelaListaDespesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\MolTarefa\ColetaDados\CadastroTarefaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\MolContato\Configuracoes\TabelaListaContatos.resx">
       <DependentUpon>TabelaListaContatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\MolDespesa\ColetaDados\FiltroDespesaForm.resx">
+      <DependentUpon>FiltroDespesaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\MolDespesa\Configuracoes\TabelaListaDespesa.resx">
+      <DependentUpon>TabelaListaDespesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\MolTarefa\ColetaDados\CadastroTarefaForm.resx">
       <DependentUpon>CadastroTarefaForm.cs</DependentUpon>
@@ -252,6 +279,7 @@
       <Name>eAgenda.Serializador</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
