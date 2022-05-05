@@ -1,26 +1,12 @@
 ﻿using eAgenda.Controladores.CompromissoModule;
 using eAgenda.Controladores.ContatoModule;
 using eAgenda.Controladores.TarefaModule;
-using eAgenda.Dominio.CompromissoModule;
-using eAgenda.Dominio.ContatoModule;
-using eAgenda.Dominio.Shared;
-using eAgenda.Dominio.TarefaModule;
-using eAgenda.Serializador.ModulosSerializador.CompromissoSerial;
-using eAgenda.Serializador.ModulosSerializador.ContatoSerial;
-using eAgenda.Serializador.ModulosSerializador.TarefaSerial;
 using eAgenda.Serializador.Shared;
 using eAgenda.WindowsApp.Modulos.MolCompromisso.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolContato.Configuracoes;
 using eAgenda.WindowsApp.Modulos.MolTarefa.Configuracoes;
 using eAgenda.WindowsApp.Shared;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace eAgenda.WindowsApp

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompromissoModule\ControladorCompromisso.cs" />
+    <Compile Include="DespesaModulo\ControladorDespesa.cs" />
     <Compile Include="Shared\Controlador.cs" />
     <Compile Include="ContatoModule\ControladorContato.cs" />
     <Compile Include="TarefaModule\ControladorTarefa.cs" />
